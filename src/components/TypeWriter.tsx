@@ -57,7 +57,7 @@ const TypeWriter: React.FC<TypeWriterProps> = ({
   return (
     <span className={className}>
       {currentText}
-      <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
+      <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-75 ml-0.5`}>|</span>
     </span>
   );
 };

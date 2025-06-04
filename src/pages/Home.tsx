@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Database, Zap } from 'lucide-react';
+import { ArrowRight, Code, Database } from 'lucide-react';
 import TypeWriter from '../components/TypeWriter';
 import AnimatedBackground from '../components/AnimatedBackground';
 
@@ -9,9 +9,7 @@ const Home = () => {
   const typewriterTexts = [
     "Pentapalli Uday Kumar",
     "Python Developer",
-    "Data Analyst",
-    "Drone Technology Enthusiast",
-    "Robotics Engineer"
+    "Data Analyst"
   ];
 
   return (
@@ -22,7 +20,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto text-center animate-fade-in">
           {/* Main Heading */}
           <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-white">Hi, I'm </span>
               <TypeWriter 
                 texts={typewriterTexts}
@@ -44,13 +42,11 @@ const Home = () => {
               <span className="text-blue-400 font-semibold"> Python</span>, 
               <span className="text-green-400 font-semibold"> SQL</span>, and 
               <span className="text-purple-400 font-semibold"> data visualization tools</span>.
-              Passionate about <span className="text-cyan-400 font-semibold">Drone Technology</span> and 
-              <span className="text-orange-400 font-semibold"> Robotics</span>.
             </p>
           </div>
 
           {/* Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12 animate-fade-in" style={{ animationDelay: '1s' }}>
+          <div className="grid md:grid-cols-2 gap-6 mb-12 animate-fade-in" style={{ animationDelay: '1s' }}>
             <div className="bg-slate-800/50 backdrop-blur-md rounded-lg p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
               <Code className="w-8 h-8 text-blue-400 mb-4 mx-auto" />
               <h3 className="text-lg font-semibold mb-2">Python Development</h3>
@@ -61,12 +57,6 @@ const Home = () => {
               <Database className="w-8 h-8 text-purple-400 mb-4 mx-auto" />
               <h3 className="text-lg font-semibold mb-2">Data Analytics</h3>
               <p className="text-gray-400 text-sm">Transforming data into actionable insights</p>
-            </div>
-            
-            <div className="bg-slate-800/50 backdrop-blur-md rounded-lg p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
-              <Zap className="w-8 h-8 text-cyan-400 mb-4 mx-auto" />
-              <h3 className="text-lg font-semibold mb-2">Drone & Robotics</h3>
-              <p className="text-gray-400 text-sm">Exploring autonomous systems and IoT solutions</p>
             </div>
           </div>
 
