@@ -6,14 +6,6 @@ import AnimatedBackground from '../components/AnimatedBackground';
 const Projects = () => {
   const projects = [
     {
-      title: "Drone Navigation System",
-      description: "An autonomous drone navigation system using computer vision and machine learning for obstacle detection and path planning.",
-      techStack: ["Python", "OpenCV", "TensorFlow", "ROS"],
-      githubUrl: "#",
-      liveUrl: "#",
-      category: "Robotics"
-    },
-    {
       title: "Budget Tracker Web App",
       description: "A comprehensive budget tracking application with data visualization, expense categorization, and financial insights.",
       techStack: ["Python", "Flask", "SQL", "Chart.js"],
@@ -22,32 +14,8 @@ const Projects = () => {
       category: "Web Development"
     },
     {
-      title: "IoT Smart Agriculture",
-      description: "IoT-based smart agriculture system with sensors for soil moisture, temperature monitoring, and automated irrigation.",
-      techStack: ["Python", "Arduino", "MQTT", "Raspberry Pi"],
-      githubUrl: "#",
-      liveUrl: "#",
-      category: "IoT"
-    },
-    {
-      title: "Stock Price Predictor",
-      description: "Machine learning model for stock price prediction using historical data and technical indicators.",
-      techStack: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
-      githubUrl: "#",
-      liveUrl: "#",
-      category: "Data Science"
-    },
-    {
-      title: "Robotic Arm Control",
-      description: "A 6-DOF robotic arm control system with inverse kinematics and real-time motion planning.",
-      techStack: ["Python", "NumPy", "PyBullet", "ROS"],
-      githubUrl: "#",
-      liveUrl: "#",
-      category: "Robotics"
-    },
-    {
       title: "Weather Analytics Dashboard",
-      description: "Interactive dashboard for weather data analysis with predictive modeling and visualization.",
+      description: "Interactive dashboard for weather data analysis with predictive modeling and visualization using AI techniques.",
       techStack: ["Python", "Dash", "Plotly", "API Integration"],
       githubUrl: "#",
       liveUrl: "#",
@@ -57,11 +25,9 @@ const Projects = () => {
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Robotics': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/50';
       case 'Web Development': return 'bg-blue-500/20 text-blue-400 border-blue-500/50';
-      case 'IoT': return 'bg-green-500/20 text-green-400 border-green-500/50';
-      case 'Data Science': return 'bg-purple-500/20 text-purple-400 border-purple-500/50';
       case 'Data Analytics': return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+      case 'AI & Machine Learning': return 'bg-purple-500/20 text-purple-400 border-purple-500/50';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
     }
   };
@@ -70,9 +36,9 @@ const Projects = () => {
     switch (tech) {
       case 'Python': return 'bg-blue-500/20 text-blue-400 border-blue-500/50';
       case 'SQL': return 'bg-green-500/20 text-green-400 border-green-500/50';
-      case 'NumPy': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/50';
-      case 'Pandas': return 'bg-purple-500/20 text-purple-400 border-purple-500/50';
-      case 'Matplotlib': return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+      case 'Flask': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/50';
+      case 'Dash': return 'bg-purple-500/20 text-purple-400 border-purple-500/50';
+      case 'Plotly': return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
       default: return 'bg-slate-500/20 text-slate-400 border-slate-500/50';
     }
   };
@@ -88,15 +54,15 @@ const Projects = () => {
               Projects
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              A showcase of my work in drone technology, robotics, data analytics, and software development
+              A showcase of my work in Python development, data analytics, and AI applications
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <div 
                 key={project.title}
-                className="group bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 animate-fade-in"
+                className="group bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-200 hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">

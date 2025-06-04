@@ -7,9 +7,7 @@ import AnimatedBackground from '../components/AnimatedBackground';
 
 const Home = () => {
   const typewriterTexts = [
-    "Pentapalli Uday Kumar",
-    "Python Developer",
-    "Data Analyst"
+    "Pentapalli Uday Kumar"
   ];
 
   return (
@@ -21,7 +19,7 @@ const Home = () => {
           {/* Main Heading */}
           <div className="mb-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-white">Hi, I'm </span>
+              <span className="text-white">Hi, I am </span>
               <TypeWriter 
                 texts={typewriterTexts}
                 className="bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent"
@@ -31,7 +29,7 @@ const Home = () => {
               />
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Aspiring Data Analyst | Python Developer
+              Python Developer | AI Enthusiast
             </p>
           </div>
 
@@ -41,7 +39,7 @@ const Home = () => {
               I build interactive, data-driven, and modern applications that solve real-world problems using 
               <span className="text-blue-400 font-semibold"> Python</span>, 
               <span className="text-green-400 font-semibold"> SQL</span>, and 
-              <span className="text-purple-400 font-semibold"> data visualization tools</span>.
+              <span className="text-purple-400 font-semibold"> AI technologies</span>.
             </p>
           </div>
 
@@ -55,8 +53,8 @@ const Home = () => {
             
             <div className="bg-slate-800/50 backdrop-blur-md rounded-lg p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
               <Database className="w-8 h-8 text-purple-400 mb-4 mx-auto" />
-              <h3 className="text-lg font-semibold mb-2">Data Analytics</h3>
-              <p className="text-gray-400 text-sm">Transforming data into actionable insights</p>
+              <h3 className="text-lg font-semibold mb-2">AI & Data Analytics</h3>
+              <p className="text-gray-400 text-sm">Leveraging AI and data to create intelligent solutions</p>
             </div>
           </div>
 

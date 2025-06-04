@@ -36,6 +36,14 @@ const Certificates = () => {
       issueDate: "August 2024",
       category: "Software Engineering",
       link: "#"
+    },
+    {
+      title: "AI using Python",
+      issuer: "Infosys Springboard",
+      description: "Comprehensive certification covering artificial intelligence concepts and implementation using Python programming language.",
+      issueDate: "Completed",
+      category: "AI & Machine Learning",
+      link: "#"
     }
   ];
 
@@ -45,6 +53,7 @@ const Certificates = () => {
       case 'Database': return 'bg-green-500/20 text-green-400 border-green-500/50';
       case 'Professional Development': return 'bg-purple-500/20 text-purple-400 border-purple-500/50';
       case 'Software Engineering': return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+      case 'AI & Machine Learning': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/50';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
     }
   };
@@ -55,6 +64,7 @@ const Certificates = () => {
       case 'Database': return '🗄️';
       case 'Professional Development': return '🎯';
       case 'Software Engineering': return '⚙️';
+      case 'AI & Machine Learning': return '🤖';
       default: return '📜';
     }
   };
@@ -78,8 +88,8 @@ const Certificates = () => {
             {certificates.map((cert, index) => (
               <div 
                 key={cert.title}
-                className="group bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="group bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-200 hover:scale-105 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-8">
                   {/* Header */}
@@ -138,14 +148,14 @@ const Certificates = () => {
           </div>
 
           {/* Statistics */}
-          <div className="mt-16 grid md:grid-cols-4 gap-6 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className="mt-16 grid md:grid-cols-4 gap-6 animate-fade-in" style={{ animationDelay: '0.5s' }}>
             <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
-              <div className="text-3xl font-bold text-blue-400 mb-2">4</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">5</div>
               <div className="text-gray-400 text-sm">Total Certificates</div>
             </div>
             
             <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
-              <div className="text-3xl font-bold text-green-400 mb-2">3</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">4</div>
               <div className="text-gray-400 text-sm">Technical Skills</div>
             </div>
             
@@ -161,16 +171,15 @@ const Certificates = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: '1s' }}>
+          <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: '0.7s' }}>
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">
               <h3 className="text-2xl font-bold text-white mb-4">Always Learning</h3>
               <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-                I'm committed to continuous learning and professional development. Currently pursuing additional certifications in AI/ML and cloud computing.
+                I'm committed to continuous learning and professional development. Currently pursuing certifications in AI using Python and Prompt Engineering.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <span className="px-4 py-2 bg-slate-700/50 rounded-lg text-sm">AWS Cloud Practitioner (In Progress)</span>
-                <span className="px-4 py-2 bg-slate-700/50 rounded-lg text-sm">Machine Learning (Planned)</span>
-                <span className="px-4 py-2 bg-slate-700/50 rounded-lg text-sm">Drone Certification (Upcoming)</span>
+                <span className="px-4 py-2 bg-green-600/20 text-green-400 rounded-lg text-sm border border-green-500/50">✅ AI using Python – Infosys Springboard (Completed)</span>
+                <span className="px-4 py-2 bg-blue-600/20 text-blue-400 rounded-lg text-sm border border-blue-500/50">🔄 Prompt Engineering – In Progress</span>
               </div>
             </div>
           </div>

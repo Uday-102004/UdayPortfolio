@@ -55,18 +55,18 @@
   }
 }
 
-/* Custom Animations */
+/* Custom Animations - Faster and Smoother */
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.4s ease-out forwards;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
+    animation: slideUp 0.4s ease-out forwards;
   }
 
   .animate-scale-in {
-    animation: scaleIn 0.4s ease-out forwards;
+    animation: scaleIn 0.3s ease-out forwards;
   }
 
   .animate-bounce-gentle {
@@ -77,7 +77,7 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -88,7 +88,7 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -99,7 +99,7 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
@@ -155,4 +155,22 @@ html {
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
+}
+
+/* Faster transitions for all interactive elements */
+* {
+  transition-duration: 0.2s !important;
+}
+
+/* Override specific transition durations for smoother experience */
+.transition-all {
+  transition-duration: 0.2s !important;
+}
+
+.transition-colors {
+  transition-duration: 0.15s !important;
+}
+
+.transition-transform {
+  transition-duration: 0.2s !important;
 }
