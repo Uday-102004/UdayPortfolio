@@ -25,16 +25,37 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
+    try {
+      const response = await fetch('https://formspree.io/f/mpwrwbln', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
-      
-      setFormData({ name: '', email: '', message: '' });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. I'll get back to you soon!",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [
@@ -59,46 +80,48 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+    <div className="min-h-screen theme-transition relative overflow-hidden" style={{ background: `rgb(var(--navy-blue))` }}>
       <AnimatedBackground />
       
       <div className="relative z-10 pt-24 pb-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-16 animate-text-reveal">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Contact
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-6 animate-underline"></div>
+            <p className="text-gray-300 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               Get in Touch
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div className="animate-fade-in">
+            <div className="animate-slide-in-left">
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
-                <p className="text-gray-300 leading-relaxed">
+                <h2 className="text-2xl font-bold text-white dark:text-white mb-4">Get in Touch</h2>
+                <p className="text-gray-300 dark:text-gray-300 leading-relaxed">
                   I'm always open to new opportunities and collaborations. Feel free to reach out!
                 </p>
               </div>
 
               {/* Contact Details */}
               <div className="space-y-6 mb-8">
-                {contactInfo.map((item) => (
+                {contactInfo.map((item, index) => (
                   <a
                     key={item.label}
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
+                    className="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/10 dark:border-white/10 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-300 hover:scale-105 hover-lift"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white shadow-lg">
                       {item.icon}
                     </div>
                     <div>
-                      <div className="text-gray-400 text-sm">{item.label}</div>
-                      <div className="text-white font-medium">{item.value}</div>
+                      <div className="text-gray-400 dark:text-gray-400 text-sm">{item.label}</div>
+                      <div className="text-white dark:text-white font-medium">{item.value}</div>
                     </div>
                   </a>
                 ))}
@@ -106,24 +129,24 @@ const Contact = () => {
 
               {/* Additional Info */}
               <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
-                <h3 className="text-lg font-semibold text-white mb-4">Let's Connect!</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <h3 className="text-lg font-semibold text-white dark:text-white mb-4">Let's Connect!</h3>
+                <p className="text-gray-300 dark:text-gray-300 text-sm leading-relaxed">
                   Whether you have a project in mind, want to discuss opportunities, or just want to say hello, 
-                  I'd love to hear from you. I'm particularly interested in drone technology, robotics, 
+                  I'd love to hear from you. I'm particularly interested in AI, Python development, 
                   and data analytics projects.
                 </p>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-700/50 p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
+            <div className="animate-slide-in-right">
+              <div className="bg-white/5 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/10 dark:border-white/10 p-8">
+                <h2 className="text-2xl font-bold text-white dark:text-white mb-6">Send a Message</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
-                    <label htmlFor="name" className="block text-gray-300 text-sm font-medium mb-2">
+                    <label htmlFor="name" className="block text-gray-300 dark:text-gray-300 text-sm font-medium mb-2">
                       Name
                     </label>
                     <input
@@ -134,13 +157,13 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="Your name"
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                      className="w-full px-4 py-3 form-input focus:outline-none transition-all"
                     />
                   </div>
 
                   {/* Email Field */}
                   <div>
-                    <label htmlFor="email" className="block text-gray-300 text-sm font-medium mb-2">
+                    <label htmlFor="email" className="block text-gray-300 dark:text-gray-300 text-sm font-medium mb-2">
                       Email
                     </label>
                     <input
@@ -151,13 +174,13 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="your.email@example.com"
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                      className="w-full px-4 py-3 form-input focus:outline-none transition-all"
                     />
                   </div>
 
                   {/* Message Field */}
                   <div>
-                    <label htmlFor="message" className="block text-gray-300 text-sm font-medium mb-2">
+                    <label htmlFor="message" className="block text-gray-300 dark:text-gray-300 text-sm font-medium mb-2">
                       Message
                     </label>
                     <textarea
@@ -168,7 +191,7 @@ const Contact = () => {
                       required
                       rows={5}
                       placeholder="Your message..."
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
+                      className="w-full px-4 py-3 form-input focus:outline-none transition-all resize-none"
                     ></textarea>
                   </div>
 
@@ -176,7 +199,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 hover-lift"
                   >
                     {isSubmitting ? (
                       <>
