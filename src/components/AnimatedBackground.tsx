@@ -7,6 +7,9 @@ const AnimatedBackground = () => {
       {/* Navy Blue Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#001f3f] via-[#002a5c] to-[#001122] dark:from-[#001f3f] dark:via-[#002a5c] dark:to-[#001122]"></div>
       
+      {/* Light mode gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-gray-100 dark:hidden"></div>
+      
       {/* Tech Grid Pattern */}
       <div className="absolute inset-0 opacity-20 dark:opacity-10">
         <div 
@@ -89,7 +92,7 @@ const AnimatedBackground = () => {
         {[...Array(50)].map((_, i) => (
           <div
             key={`star-${i}`}
-            className="absolute w-1 h-1 bg-white rounded-full"
+            className="absolute w-1 h-1 bg-blue-400 dark:bg-white rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,

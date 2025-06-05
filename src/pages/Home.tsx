@@ -11,7 +11,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen theme-transition text-white dark:text-white relative overflow-hidden" style={{ background: `rgb(var(--navy-blue))` }}>
+    <div className="min-h-screen theme-transition relative overflow-hidden" style={{ background: `rgb(var(--navy-blue))` }}>
       <AnimatedBackground />
       
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
@@ -29,14 +29,14 @@ const Home = () => {
               />
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-6 animate-underline"></div>
-            <p className="text-xl md:text-2xl text-gray-300 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Python Developer | AI Enthusiast
             </p>
           </div>
 
           {/* Description */}
           <div className="mb-12 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <p className="text-lg md:text-xl text-gray-400 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed">
               I build interactive, data-driven, and modern applications that solve real-world problems using 
               <span className="text-blue-400 dark:text-blue-400 font-semibold"> Python</span>, 
               <span className="text-green-400 dark:text-green-400 font-semibold"> SQL</span>, and 
@@ -46,16 +46,16 @@ const Home = () => {
 
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 dark:border-white/10 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-200 hover:scale-105 hover-lift">
+            <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl p-6 border border-gray-300/20 dark:border-white/10 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-200 hover:scale-105 hover-lift">
               <Code className="w-8 h-8 text-blue-400 dark:text-blue-400 mb-4 mx-auto" />
-              <h3 className="text-lg font-semibold mb-2 text-white dark:text-white">Python Development</h3>
-              <p className="text-gray-400 dark:text-gray-400 text-sm">Building robust applications with clean, efficient code</p>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Python Development</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Building robust applications with clean, efficient code</p>
             </div>
             
-            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 dark:border-white/10 hover:border-purple-500/50 dark:hover:border-purple-500/50 transition-all duration-200 hover:scale-105 hover-lift">
+            <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl p-6 border border-gray-300/20 dark:border-white/10 hover:border-purple-500/50 dark:hover:border-purple-500/50 transition-all duration-200 hover:scale-105 hover-lift">
               <Database className="w-8 h-8 text-purple-400 dark:text-purple-400 mb-4 mx-auto" />
-              <h3 className="text-lg font-semibold mb-2 text-white dark:text-white">AI & Data Analytics</h3>
-              <p className="text-gray-400 dark:text-gray-400 text-sm">Leveraging AI and data to create intelligent solutions</p>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">AI & Data Analytics</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Leveraging AI and data to create intelligent solutions</p>
             </div>
           </div>
 
@@ -63,7 +63,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in" style={{ animationDelay: '0.9s' }}>
             <Link
               to="/projects"
-              className="group bg-white dark:bg-white text-slate-900 dark:text-slate-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 dark:hover:bg-gray-100 transition-all duration-200 flex items-center justify-center gap-2 hover:scale-105 hover-lift"
+              className="group bg-gray-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 flex items-center justify-center gap-2 hover:scale-105 hover-lift"
             >
               View Projects
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -71,7 +71,7 @@ const Home = () => {
             
             <Link
               to="/contact"
-              className="group bg-transparent border-2 border-blue-500 dark:border-blue-500 text-blue-400 dark:text-blue-400 px-8 py-4 rounded-xl font-semibold hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-white transition-all duration-200 flex items-center justify-center gap-2 hover:scale-105 hover-lift"
+              className="group bg-transparent border-2 border-blue-500 dark:border-blue-500 text-blue-500 dark:text-blue-400 px-8 py-4 rounded-xl font-semibold hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-white transition-all duration-200 flex items-center justify-center gap-2 hover:scale-105 hover-lift"
             >
               Contact Me
             </Link>
@@ -81,7 +81,7 @@ const Home = () => {
 
       {/* Footer */}
       <div className="absolute bottom-4 left-0 right-0 text-center animate-fade-in" style={{ animationDelay: '1.2s' }}>
-        <p className="text-gray-500 dark:text-gray-500 text-sm">© 2025 Uday Kumar. All rights reserved.</p>
+        <p className="text-gray-600 dark:text-gray-500 text-sm">© 2025 Uday Kumar. All rights reserved.</p>
       </div>
     </div>
   );

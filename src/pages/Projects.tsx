@@ -20,6 +20,22 @@ const Projects = () => {
       githubUrl: "#",
       liveUrl: "#",
       category: "Data Analytics"
+    },
+    {
+      title: "Portfolio Website",
+      description: "Modern, responsive personal portfolio website with dark/light mode toggle, smooth animations, and interactive design.",
+      techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      githubUrl: "#",
+      liveUrl: "#",
+      category: "Web Development"
+    },
+    {
+      title: "AI with Python Project",
+      description: "Machine learning project implementing AI algorithms for data analysis, pattern recognition, and predictive modeling.",
+      techStack: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
+      githubUrl: "#",
+      liveUrl: "#",
+      category: "AI & Machine Learning"
     }
   ];
 
@@ -39,12 +55,17 @@ const Projects = () => {
       case 'Flask': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/50';
       case 'Dash': return 'bg-purple-500/20 text-purple-400 border-purple-500/50';
       case 'Plotly': return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+      case 'React': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/50';
+      case 'TypeScript': return 'bg-blue-500/20 text-blue-400 border-blue-500/50';
+      case 'TensorFlow': return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+      case 'Pandas': return 'bg-green-500/20 text-green-400 border-green-500/50';
+      case 'Scikit-learn': return 'bg-purple-500/20 text-purple-400 border-purple-500/50';
       default: return 'bg-slate-500/20 text-slate-400 border-slate-500/50';
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+    <div className="min-h-screen theme-transition relative overflow-hidden" style={{ background: `rgb(var(--navy-blue))` }}>
       <AnimatedBackground />
       
       <div className="relative z-10 pt-24 pb-16 px-4">
@@ -53,7 +74,7 @@ const Projects = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Projects
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 dark:text-gray-400 text-lg max-w-2xl mx-auto">
               A showcase of my work in Python development, data analytics, and AI applications
             </p>
           </div>
@@ -62,7 +83,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div 
                 key={project.title}
-                className="group bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-200 hover:scale-105 animate-fade-in"
+                className="group bg-white/5 dark:bg-slate-800/50 backdrop-blur-md rounded-xl border border-gray-300/20 dark:border-slate-700/50 hover:border-blue-500/50 transition-all duration-200 hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
@@ -74,28 +95,28 @@ const Projects = () => {
                     <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                       <a 
                         href={project.githubUrl}
-                        className="p-2 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors"
+                        className="p-2 bg-gray-200/50 dark:bg-slate-700/50 rounded-lg hover:bg-gray-300/50 dark:hover:bg-slate-600/50 transition-colors"
                         title="GitHub"
                       >
-                        <Github className="w-4 h-4" />
+                        <Github className="w-4 h-4 text-gray-700 dark:text-white" />
                       </a>
                       <a 
                         href={project.liveUrl}
-                        className="p-2 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors"
+                        className="p-2 bg-gray-200/50 dark:bg-slate-700/50 rounded-lg hover:bg-gray-300/50 dark:hover:bg-slate-600/50 transition-colors"
                         title="Live Demo"
                       >
-                        <ExternalLink className="w-4 h-4" />
+                        <ExternalLink className="w-4 h-4 text-gray-700 dark:text-white" />
                       </a>
                     </div>
                   </div>
 
                   {/* Project Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -117,14 +138,14 @@ const Projects = () => {
                   <div className="flex gap-3">
                     <a 
                       href={project.githubUrl}
-                      className="flex-1 bg-slate-700/50 hover:bg-slate-600/50 text-center py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
+                      className="flex-1 bg-gray-200/50 dark:bg-slate-700/50 hover:bg-gray-300/50 dark:hover:bg-slate-600/50 text-center py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2 text-gray-700 dark:text-white"
                     >
                       <Github className="w-4 h-4" />
                       GitHub
                     </a>
                     <a 
                       href={project.liveUrl}
-                      className="flex-1 bg-blue-600/50 hover:bg-blue-500/50 text-center py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
+                      className="flex-1 bg-blue-600/50 hover:bg-blue-500/50 text-center py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2 text-white"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
@@ -138,8 +159,8 @@ const Projects = () => {
           {/* CTA Section */}
           <div className="text-center mt-16 animate-fade-in">
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">
-              <h3 className="text-2xl font-bold text-white mb-4">Interested in collaborating?</h3>
-              <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Interested in collaborating?</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
               <a 
