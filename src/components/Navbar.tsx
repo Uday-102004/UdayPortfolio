@@ -5,7 +5,7 @@ import { Menu, X, Sun, Moon } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false); // Changed default to false (light mode)
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -26,8 +26,8 @@ const Navbar = () => {
       setDarkMode(savedTheme === 'dark');
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     } else {
-      // Default to dark mode
-      document.documentElement.classList.add('dark');
+      // Default to light mode
+      document.documentElement.classList.remove('dark');
     }
 
     const handleScroll = () => {
