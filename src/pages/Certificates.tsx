@@ -70,7 +70,7 @@ const Certificates = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-slate-900 text-black dark:text-white relative overflow-hidden transition-colors duration-500">
       <AnimatedBackground />
       
       <div className="relative z-10 pt-24 pb-16 px-4">
@@ -79,7 +79,7 @@ const Certificates = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Certificates
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
               Professional certifications and achievements that demonstrate my commitment to continuous learning and skill development
             </p>
           </div>
@@ -88,7 +88,7 @@ const Certificates = () => {
             {certificates.map((cert, index) => (
               <div 
                 key={cert.title}
-                className="group bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-200 hover:scale-105 animate-fade-in"
+                className="group bg-gray-100 dark:bg-slate-800/50 backdrop-blur-md rounded-xl border border-gray-300 dark:border-slate-700/50 hover:border-blue-500/50 transition-all duration-200 hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-8">
@@ -99,16 +99,16 @@ const Certificates = () => {
                         {getCategoryIcon(cert.category)}
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-bold text-black dark:text-white group-hover:text-blue-400 transition-colors">
                           {cert.title}
                         </h3>
-                        <p className="text-gray-400 text-sm">{cert.issuer}</p>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm">{cert.issuer}</p>
                       </div>
                     </div>
                     
                     <a 
                       href={cert.link}
-                      className="p-2 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors opacity-0 group-hover:opacity-100"
+                      className="p-2 bg-gray-200 dark:bg-slate-700/50 rounded-lg hover:bg-gray-300 dark:hover:bg-slate-600/50 transition-colors opacity-0 group-hover:opacity-100"
                       title="View Certificate"
                     >
                       <ExternalLink className="w-4 h-4" />
@@ -123,7 +123,7 @@ const Certificates = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-300 leading-relaxed mb-6">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                     {cert.description}
                   </p>
 
@@ -149,32 +149,32 @@ const Certificates = () => {
 
           {/* Statistics */}
           <div className="mt-16 grid md:grid-cols-4 gap-6 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
+            <div className="text-center p-6 bg-gray-100 dark:bg-slate-800/30 rounded-xl border border-gray-300 dark:border-slate-700/50">
               <div className="text-3xl font-bold text-blue-400 mb-2">5</div>
-              <div className="text-gray-400 text-sm">Total Certificates</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Total Certificates</div>
             </div>
             
-            <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
+            <div className="text-center p-6 bg-gray-100 dark:bg-slate-800/30 rounded-xl border border-gray-300 dark:border-slate-700/50">
               <div className="text-3xl font-bold text-green-400 mb-2">4</div>
-              <div className="text-gray-400 text-sm">Technical Skills</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Technical Skills</div>
             </div>
             
-            <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
+            <div className="text-center p-6 bg-gray-100 dark:bg-slate-800/30 rounded-xl border border-gray-300 dark:border-slate-700/50">
               <div className="text-3xl font-bold text-purple-400 mb-2">1</div>
-              <div className="text-gray-400 text-sm">Professional Development</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Professional Development</div>
             </div>
             
-            <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
+            <div className="text-center p-6 bg-gray-100 dark:bg-slate-800/30 rounded-xl border border-gray-300 dark:border-slate-700/50">
               <div className="text-3xl font-bold text-orange-400 mb-2">2024</div>
-              <div className="text-gray-400 text-sm">Most Recent Year</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Most Recent Year</div>
             </div>
           </div>
 
           {/* CTA Section */}
           <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: '0.7s' }}>
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">
-              <h3 className="text-2xl font-bold text-white mb-4">Always Learning</h3>
-              <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-black dark:text-white mb-4">Always Learning</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
                 I'm committed to continuous learning and professional development. Currently pursuing certifications in AI using Python and Prompt Engineering.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">

@@ -32,7 +32,7 @@ const Education = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-slate-900 text-black dark:text-white relative overflow-hidden transition-colors duration-500">
       <AnimatedBackground />
       
       <div className="relative z-10 pt-24 pb-16 px-4">
@@ -41,7 +41,7 @@ const Education = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Education
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
               My academic journey and continuous learning path in technology and engineering
             </p>
           </div>
@@ -50,7 +50,7 @@ const Education = () => {
             {educationData.map((edu, index) => (
               <div 
                 key={edu.degree}
-                className="group bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 animate-fade-in"
+                className="group bg-gray-100 dark:bg-slate-800/50 backdrop-blur-md rounded-xl border border-gray-300 dark:border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="p-8">
@@ -66,10 +66,10 @@ const Education = () => {
                     <div className="flex-1">
                       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
                         <div>
-                          <h3 className="text-xl lg:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                          <h3 className="text-xl lg:text-2xl font-bold text-black dark:text-white group-hover:text-blue-400 transition-colors">
                             {edu.degree}
                           </h3>
-                          <div className="flex items-center gap-2 text-gray-400 mt-2">
+                          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 mt-2">
                             <MapPin className="w-4 h-4" />
                             <span className="text-sm lg:text-base">{edu.institution}</span>
                           </div>
@@ -90,7 +90,7 @@ const Education = () => {
                         </div>
                       </div>
 
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                         {edu.description}
                       </p>
                     </div>
@@ -102,11 +102,11 @@ const Education = () => {
 
           {/* Additional Learning */}
           <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <h2 className="text-2xl font-bold text-white mb-8 text-center">Continuous Learning</h2>
+            <h2 className="text-2xl font-bold text-black dark:text-white mb-8 text-center">Continuous Learning</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">
+              <div className="bg-gray-100 dark:bg-slate-800/30 rounded-xl p-6 border border-gray-300 dark:border-slate-700/50">
                 <h3 className="text-lg font-semibold text-blue-400 mb-4">Technical Skills Development</h3>
-                <ul className="space-y-2 text-gray-300">
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                     Python Programming & Data Analysis
@@ -122,9 +122,9 @@ const Education = () => {
                 </ul>
               </div>
 
-              <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">
+              <div className="bg-gray-100 dark:bg-slate-800/30 rounded-xl p-6 border border-gray-300 dark:border-slate-700/50">
                 <h3 className="text-lg font-semibold text-purple-400 mb-4">Research Interests</h3>
-                <ul className="space-y-2 text-gray-300">
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                     Drone Technology & Autonomous Systems

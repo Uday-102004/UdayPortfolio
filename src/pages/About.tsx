@@ -5,7 +5,7 @@ import AnimatedBackground from '../components/AnimatedBackground';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-slate-900 text-black dark:text-white relative overflow-hidden transition-colors duration-500">
       <AnimatedBackground />
       
       <div className="relative z-10 pt-24 pb-16 px-4">
@@ -17,7 +17,7 @@ const About = () => {
                 About Me
               </h1>
               
-              <div className="space-y-6 text-gray-300 leading-relaxed">
+              <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
                 <p className="text-lg">
                   Hello! I'm <span className="text-blue-400 font-semibold">Uday Kumar Pentapalli</span>, a passionate Python Developer and aspiring 
                   Data Analyst with a strong foundation in Computer Science. I'm currently 
@@ -52,7 +52,7 @@ const About = () => {
                   href="https://linkedin.com/in/udaykumar" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-md rounded-lg px-4 py-2 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
+                  className="flex items-center gap-2 bg-gray-100 dark:bg-slate-800/50 backdrop-blur-md rounded-lg px-4 py-2 border border-gray-300 dark:border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
                 >
                   <Linkedin className="w-5 h-5 text-blue-400" />
                   <span>LinkedIn</span>
@@ -62,7 +62,7 @@ const About = () => {
                   href="https://github.com/Uday" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-md rounded-lg px-4 py-2 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105"
+                  className="flex items-center gap-2 bg-gray-100 dark:bg-slate-800/50 backdrop-blur-md rounded-lg px-4 py-2 border border-gray-300 dark:border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105"
                 >
                   <Github className="w-5 h-5 text-purple-400" />
                   <span>GitHub</span>
@@ -73,12 +73,12 @@ const About = () => {
             {/* Image Placeholder */}
             <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="relative">
-                <div className="w-full h-96 bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl border border-slate-600/50 flex items-center justify-center">
+                <div className="w-full h-96 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-slate-800 dark:to-slate-700 rounded-2xl border border-gray-300 dark:border-slate-600/50 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-24 h-24 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                       <span className="text-2xl font-bold text-white">UK</span>
                     </div>
-                    <p className="text-gray-400">Python Developer</p>
+                    <p className="text-gray-500 dark:text-gray-400">Python Developer</p>
                   </div>
                 </div>
                 
