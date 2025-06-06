@@ -58,7 +58,7 @@
     --border: 226 232 240;
     --input: 226 232 240;
     --ring: 59 130 246;
-    --navy-blue: 248 250 252;
+    --navy-blue: 255 255 255; /* White background for light mode */
   }
 }
 
@@ -77,7 +77,7 @@
 
   /* Light mode body override */
   :root:not(.dark) body {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    background: #ffffff;
     color: #0f172a;
   }
 }

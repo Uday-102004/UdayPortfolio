@@ -23,7 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen bg-slate-900">
+        <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-500">
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
