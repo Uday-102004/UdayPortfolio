@@ -27,7 +27,7 @@ const Certificates = () => {
       description: "Covers essential employability skills including communication, soft skills, and digital literacy for young professionals.",
       issueDate: "April 2025",
       category: "Professional Development",
-      link: "#"
+      link: "https://drive.google.com/drive/folders/1uEa_z2__ysv96d-duDaHrUShStPy6Oop"
     },
     {
       title: "Software Engineering and Agile Software Development",
