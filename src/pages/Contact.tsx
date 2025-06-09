@@ -83,7 +83,7 @@ const Contact = () => {
     <div className="min-h-screen theme-transition relative overflow-hidden" style={{ background: `rgb(var(--navy-blue))` }}>
       <AnimatedBackground />
       
-      <div className="relative z-10 pt-24 pb-16 px-4">
+      <div className="relative z-10 pt-24 pb-32 px-4 min-h-screen">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-text-reveal">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -95,7 +95,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {/* Contact Information */}
             <div className="animate-slide-in-left">
               <div className="mb-8">
