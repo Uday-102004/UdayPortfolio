@@ -165,7 +165,7 @@ const Projects = () => {
               </p>
               <a 
                 href="/contact"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-black dark:text-white px-8 py-3 rounded-lg font-medium transition-colors"
               >
                 Get In Touch
               </a>
