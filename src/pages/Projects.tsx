@@ -24,8 +24,8 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "Modern, responsive personal portfolio website with dark/light mode toggle, smooth animations, and interactive design.",
       techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/Uday-102004/UdayPortfolio",
+      liveUrl: "https://uday-portfolio-kappa.vercel.app/",
       category: "Web Development"
     },
     {
