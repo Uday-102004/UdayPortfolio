@@ -11,7 +11,7 @@ const Certificates = () => {
       description: "Covers basic Python programming concepts and foundational coding skills.",
       issueDate: "August 2024",
       category: "Programming",
-      link: "#"
+      link: "https://drive.google.com/file/d/1fTK9HzZT3-600eD41_zpK7dftacODKt3/view?usp=sharing"
     },
     {
       title: "Database Management System",
@@ -19,7 +19,7 @@ const Certificates = () => {
       description: "A certification covering core DBMS concepts like data models, ER diagrams, normalization, and basic SQL.",
       issueDate: "August 2024",
       category: "Database",
-      link: "#"
+      link: "https://drive.google.com/file/d/1CCQXtryRiuu8iRLc9Ky34c5Za2boV3YF/view?usp=sharing"
     },
     {
       title: "TCS iON Career Edge – Young Professional",
@@ -35,7 +35,7 @@ const Certificates = () => {
       description: "A certification covering software engineering principles and Agile methodologies for efficient and adaptive software development.",
       issueDate: "August 2024",
       category: "Software Engineering",
-      link: "#"
+      link: "https://drive.google.com/file/d/1HvJ99gpegmuIquTEcqiEyBZN9swOLcdP/view?usp=sharing"
     },
     {
       title: "AI using Python",
