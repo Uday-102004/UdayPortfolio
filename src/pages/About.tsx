@@ -49,7 +49,7 @@ const About = () => {
               {/* Social Links */}
               <div className="flex space-x-6 mt-8">
                 <a 
-                  href="https://linkedin.com/in/udaykumar" 
+                  href="https://www.linkedin.com/in/uday-kumar-610832328/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-gray-100 dark:bg-slate-800/50 backdrop-blur-md rounded-lg px-4 py-2 border border-gray-300 dark:border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
@@ -59,7 +59,7 @@ const About = () => {
                 </a>
                 
                 <a 
-                  href="https://github.com/Uday" 
+                  href="https://github.com/Uday-102004" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-gray-100 dark:bg-slate-800/50 backdrop-blur-md rounded-lg px-4 py-2 border border-gray-300 dark:border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105"
