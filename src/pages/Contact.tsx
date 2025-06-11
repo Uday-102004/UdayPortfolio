@@ -69,13 +69,13 @@ const Contact = () => {
       icon: <Github className="w-5 h-5" />,
       label: "GitHub",
       value: "github.com/Uday",
-      link: "https://github.com/Uday"
+      link: "https://github.com/Uday-102004"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
       value: "linkedin.com/in/Uday",
-      link: "https://linkedin.com/in/Uday"
+      link: "https://www.linkedin.com/in/uday-kumar-610832328/"
     }
   ];
 
