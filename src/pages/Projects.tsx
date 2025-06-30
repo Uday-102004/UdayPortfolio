@@ -7,17 +7,17 @@ const Projects = () => {
     {
       title: "Budget Tracker Web App",
       description: "A comprehensive budget tracking application with data visualization, expense categorization, and financial insights.",
-      techStack: ["Python", "Flask", "SQL", "Chart.js"],
+      techStack: ["Python", "SQL", "HTML","CSS],
       githubUrl: "#",
       liveUrl: "#",
       category: "Web Development"
     },
     {
-      title: "Weather Analytics Dashboard",
-      description: "Interactive dashboard for weather data analysis with predictive modeling and visualization using AI techniques.",
-      techStack: ["Python", "Dash", "Plotly", "API Integration"],
-      githubUrl: "#",
-      liveUrl: "#",
+      title: "Retail Sales Analysis SQL",
+      description: "Retail sales data analysis using SQL for data cleaning, exploration, and business insights generation.",
+      techStack: ["SQL"],
+      githubUrl: "https://github.com/Uday-102004/SQL_RETAIL_SALES",
+      liveUrl: "https://github.com/Uday-102004/SQL_RETAIL_SALES/blob/main/SQL_PROJECT_1.sql",
       category: "Data Analytics"
     },
     {
