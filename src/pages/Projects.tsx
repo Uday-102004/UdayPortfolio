@@ -13,7 +13,7 @@ const Projects = () => {
       category: "Web Development"
     },
     {
-      title: "Retail Sales Analysis SQL ",
+      title: "Retail Sales Analysis SQL",
       description: "Retail sales data analysis using SQL for data cleaning, exploration, and business insights generation.",
       techStack: ["SQL"],
       githubUrl: "https://github.com/Uday-102004/SQL_RETAIL_SALES",
