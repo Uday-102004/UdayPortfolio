@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "Budget Tracker Web App",
       description: "A comprehensive budget tracking application with data visualization, expense categorization, and financial insights.",
-      techStack: ["Python", "SQL", "HTML","CSS],
+      techStack: ["Python", "SQL", "HTML", "CSS"],
       githubUrl: "#",
       liveUrl: "#",
       category: "Web Development"
