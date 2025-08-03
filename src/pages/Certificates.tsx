@@ -7,19 +7,19 @@ const Certificates = () => {
   const certificates = [
     {
       title: "Python Foundation Certification",
-      issuer: "TechCorp Academy",
+      issuer: "Infosys Springboard",
       description: "Covers basic Python programming concepts and foundational coding skills.",
       issueDate: "August 2024",
       category: "Programming",
       link: "https://drive.google.com/file/d/1fTK9HzZT3-600eD41_zpK7dftacODKt3/view?usp=sharing"
     },
     {
-      title: "Database Management System",
-      issuer: "DataTech Institute",
+      title: "Database Management System-SQL",
+      issuer: "HackerRank",
       description: "A certification covering core DBMS concepts like data models, ER diagrams, normalization, and basic SQL.",
-      issueDate: "August 2024",
+      issueDate: "July 2025",
       category: "Database",
-      link: "https://drive.google.com/file/d/1CCQXtryRiuu8iRLc9Ky34c5Za2boV3YF/view?usp=sharing"
+      link: "https://drive.google.com/file/d/1WluYHH2cf_HpJG5seavXGiqCErJ03Aye/view?usp=sharing"
     },
     {
       title: "TCS iON Career Edge – Young Professional",
@@ -31,7 +31,7 @@ const Certificates = () => {
     },
     {
       title: "Software Engineering and Agile Software Development",
-      issuer: "AgileLearn Platform",
+      issuer: "Infosys Springboard",
       description: "A certification covering software engineering principles and Agile methodologies for efficient and adaptive software development.",
       issueDate: "August 2024",
       category: "Software Engineering",
