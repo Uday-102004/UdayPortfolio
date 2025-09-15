@@ -13,11 +13,11 @@ const Projects = () => {
       category: "Web Development"
     },
     {
-      title: "Retail Sales Analysis SQL",
-      description: "Retail sales data analysis using SQL for data cleaning, exploration, and business insights generation.",
+      title: "Spotify Data Analysis Using SQL",
+      description: "Spotify Data Analysis Using SQL for data cleaning, exploration, and deriving insights on user listening patterns and trends from 40,000+ records.",
       techStack: ["SQL"],
-      githubUrl: "https://github.com/Uday-102004/SQL_RETAIL_SALES",
-      liveUrl: "https://github.com/Uday-102004/SQL_RETAIL_SALES/blob/main/SQL_PROJECT_1.sql",
+      githubUrl: "https://github.com/Uday-102004/Spotify-SQL-DATA-ANALYSIS",
+      liveUrl: "https://github.com/Uday-102004/Spotify-SQL-DATA-ANALYSIS.git",
       category: "Data Analytics"
     },
     {
