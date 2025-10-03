@@ -8,9 +8,9 @@ const Projects = () => {
       title: "Budget Tracker Web App",
       description: "A comprehensive budget tracking application with data visualization, expense categorization, and financial insights.",
       techStack: ["Python", "SQL", "HTML", "CSS"],
-      githubUrl: "#",
-      liveUrl: "#",
-      category: "Web Development"
+      githubUrl: "https://github.com/Uday-102004/Budget-Tracker-with-Ai",
+      liveUrl: "https://budget-tracker-with-ai.vercel.app/",
+      category: "Web Development // Mostly used ai tools to do this project."
     },
     {
       title: "Spotify Data Analysis Using SQL",
@@ -31,7 +31,7 @@ const Projects = () => {
     {
       title: "AI with Python Project",
       description: "Machine learning project implementing AI algorithms for data analysis, pattern recognition, and predictive modeling.",
-      techStack: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
+      techStack: ["Python", "Pandas", ],
       githubUrl: "#",
       liveUrl: "#",
       category: "AI & Machine Learning"
