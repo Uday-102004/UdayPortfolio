@@ -30,12 +30,12 @@ const Certificates = () => {
       link: "https://drive.google.com/file/d/1voiJIfMLjA7gW9_nBZYZguCzlvYhduS-/view?usp=sharing"
     },
     {
-      title: "Software Engineering and Agile Software Development",
-      issuer: "Infosys Springboard",
-      description: "A certification covering software engineering principles and Agile methodologies for efficient and adaptive software development.",
-      issueDate: "August 2024",
+      title: "SERVICENOW UNIVERSITY (AICTE & SMARTBRIDGE) | VIRTUAL INTERN | SERVICENOW",
+      issuer: "SERVICENOW UNIVERSITY",
+      description: "Learned IT service management, workflows, and cloud-based solutions in a ServiceNow environment.",
+      issueDate: "October 2025",
       category: "Software Engineering",
-      link: "https://drive.google.com/file/d/1HvJ99gpegmuIquTEcqiEyBZN9swOLcdP/view?usp=sharing"
+      link: "https://drive.google.com/drive/folders/1uEa_z2__ysv96d-duDaHrUShStPy6Oop"
     },
     {
       title: "AI using Python",
