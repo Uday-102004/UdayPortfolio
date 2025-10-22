@@ -35,7 +35,7 @@ const Certificates = () => {
       description: "Learned IT service management, workflows, and cloud-based solutions in a ServiceNow environment.",
       issueDate: "October 2025",
       category: "Software Engineering",
-      link: "https://drive.google.com/drive/folders/1uEa_z2__ysv96d-duDaHrUShStPy6Oop"
+      link: "https://drive.google.com/file/d/1R9szwyjxEFKehvqZBBg8l75AgprCSxWx/view?usp=sharing"
     },
     {
       title: "AI using Python",
